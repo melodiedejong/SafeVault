@@ -1,0 +1,15 @@
+﻿@page
+@using System.Security.Claims
+
+@model SafeVault.Pages.Admin.DashboardModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h1>Admin Dashboard</h1>
+<p>Welcome, @User.Identity.Name! You have administrative privileges.</p>
+
+<!-- Add admin-only controls here -->
+<p>User: @User.Identity.Name</p>
+<p>Authenticated: @User.Identity.IsAuthenticated</p>
+<p>Role: @User.FindFirst(ClaimTypes.Role)?.Value</p>

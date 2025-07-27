@@ -1,0 +1,19 @@
+### Register User
+POST http://localhost:5125/Register
+Content-Type: application/json
+
+{
+  "username": "testuser@example.com",
+  "email": "testuser@example.com",
+  "password": "SecurePa$$123",
+  "role": "User"
+}
+
+### Login User
+POST http://localhost:5125/Login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "SecurePa$$123"
+}
